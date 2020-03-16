@@ -24,6 +24,8 @@ int main(int argc, char* argv[])
     {
         if (GetAsyncKeyState(HOTKEY_MONEY) & 0x8000)
         {
+            #PlaySoundA((LPCSTR)snd, ...)
+            #PlaySound(L"str", ...)
             sndPlaySound(sound, SND_MEMORY | SND_ASYNC | SND_NODEFAULT);
         }
         if (GetAsyncKeyState(HOTKEY_MUSIC) & 0x8000)
