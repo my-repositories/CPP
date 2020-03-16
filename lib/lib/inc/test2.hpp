@@ -1,0 +1,1 @@
+void test2(int *c);
