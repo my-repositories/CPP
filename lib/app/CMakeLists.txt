@@ -1,0 +1,6 @@
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_ROOT_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+file(GLOB APP_SOURCES "src/*.cpp")
+add_executable(${PROJECT_NAME} ${APP_SOURCES})
+target_link_libraries(${PROJECT_NAME} testlib)
+target_include_directories(${PROJECT_NAME} PRIVATE inc ${PROJECT_ROOT_DIR}/deps/inc)

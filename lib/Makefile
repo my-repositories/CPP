@@ -26,6 +26,11 @@ clean:
 	rm -rf ./*.o ${BUILD_DIR}
 
 
+cmake: clean lib_clean app_clean cmake_compile cmake_link
+cmake_compile:
+	cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake_link:
+	cmake --build build --config Release
 
 
 lib_build: clean lib_clean lib_compile lib_move_output lib_archive

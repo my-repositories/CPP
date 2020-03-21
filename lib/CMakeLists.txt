@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+set(PROJECT_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(PROJECT_NAME libqa)
+set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "" FORCE)
+set(CMAKE_BUILD_TYPE Release)
+project(${PROJECT_NAME})
+add_subdirectory(lib)
+add_subdirectory(app)
