@@ -19,6 +19,8 @@ int main(int argc, char* argv[])
     mci.append(" alias SND_MUSIC");
     mciSendString(mci.c_str(), NULL, NULL, NULL);
     mciSendString("play SND_MUSIC repeat", NULL, NULL, NULL);
+    // and dont forget to close opened file
+    // mciSendString("close SND_MUSIC", NULL, 0, NULL);
 
     while (true)
     {
