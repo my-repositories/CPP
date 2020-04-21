@@ -21,6 +21,13 @@ int main(int argc, char* argv[])
     mciSendString("play SND_MUSIC repeat", NULL, NULL, NULL);
     // and dont forget to close opened file
     // mciSendString("close SND_MUSIC", NULL, 0, NULL);
+    // https://stackoverflow.com/questions/22253074/how-to-play-or-open-mp3-or-wav-sound-file-in-c-program
+    /*
+        lstrcat(cmd, "play \"");
+        lstrcat(cmd, sound); // sound = MUSIC.MP3
+        lstrcat(cmd, "\"");
+        mciSendString(cmd, nullptr, 0, nullptr);
+    */
 
     while (true)
     {
