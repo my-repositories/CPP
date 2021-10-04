@@ -1,7 +1,23 @@
 # CPP
 C++ My Library
 
+## Как разделить проект по каталогам VS
+https://www.cyberforum.ru/cpp-ide-tools/thread1796305.html#post9472014
 
+```
+# Output directory
+..\include
+
+# Intermadiate Directory
+..\build\$(Configuration)-$(Platform)\
+
+# Output Directory
+..\product\$(Configuration)-$(Platform)\
+```
+
+---
+
+```
 char getch(){
     char buf=0;
     struct termios old={0};
@@ -22,3 +38,4 @@ char getch(){
         perror ("tcsetattr ~ICANON");
     return buf;
  }
+```
